@@ -12,6 +12,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.pexels.com',
+        "fabulous-dogs-e1c598da6a.media.strapiapp.com"
       }
     ],
   },
