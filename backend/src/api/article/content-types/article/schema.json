@@ -63,6 +63,12 @@
     },
     "date": {
       "type": "datetime"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "time": {
+      "type": "integer"
     }
   }
 }
