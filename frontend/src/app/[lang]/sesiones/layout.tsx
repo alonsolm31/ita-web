@@ -1,9 +1,14 @@
 import Image from "next/image";
 import img from "../../../../public/tarot.jpg";
-
+import Script from "next/script";
+import styles from "./layout.module.css";
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <div className="pb-10">
+      <Script
+        type="text/javascript"
+        src="http://localhost:1337/plugins/strapi-stripe/static/stripe.js"
+      />
       {children}
       <div className="flex flex-col items-center">
         <Image
@@ -13,10 +18,14 @@ export default function layout({ children }: { children: React.ReactNode }) {
           width={9999}
           height={1}
         />
-        <div className="grid justify-center text-center">
-          <h1>LECTURAS EVENTOS PRIVADOS Y COLABORACIONES</h1>
-          <p>¿Tu audiencia o tus clientes resuenan con el tarot?</p>
-          <p>
+        <div className="py-6 grid justify-center text-center">
+          <h1 className={"py-6 " + styles.title}>
+            LECTURAS EVENTOS PRIVADOS Y COLABORACIONES
+          </h1>
+          <p className={styles.subTitle}>
+            ¿Tu audiencia o tus clientes resuenan con el tarot?
+          </p>
+          <p className={styles.subTitle}>
             ¡Colaboremos juntos! Dejame tu mail y te enviamos toda la
             información.
           </p>

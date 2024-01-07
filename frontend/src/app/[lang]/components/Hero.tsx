@@ -3,6 +3,7 @@ import Image from "next/image";
 import HighlightedText from "./HighlightedText";
 import { getStrapiMedia } from "../utils/api-helpers";
 import { renderButtonStyle } from "../utils/render-button-style";
+import styles from "./Hero.module.css";
 
 interface Button {
   id: string;
@@ -38,14 +39,22 @@ export default function Hero({ data }: HeroProps) {
 
   return (
     <section className="dark:bg-black dark:text-gray-100">
-      <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-      <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+      <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row">
+        <div
+          className={
+            "flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80  xl:h-112 2xl:h-128 " +
+            styles.heightLg
+          }
+        >
           <Image
             src={imgUrl || ""}
             alt={
               data.picture.data.attributes.alternativeText || "none provided"
             }
-            className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 "
+            className={
+              "object-contain h-72 sm:h-80  xl:h-112 2xl:h-128 " +
+              styles.heightLg
+            }
             width={600}
             height={600}
           />
@@ -77,7 +86,6 @@ export default function Hero({ data }: HeroProps) {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -1,1 +1,6 @@
-{}
+{
+  "/[lang]/[...slug]/page": "app/[lang]/[...slug]/page.js",
+  "/[lang]/page": "app/[lang]/page.js",
+  "/[lang]/sesiones/page": "app/[lang]/sesiones/page.js",
+  "/[lang]/blog/[category]/[slug]/page": "app/[lang]/blog/[category]/[slug]/page.js"
+}

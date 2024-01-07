@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import { CgWebsite } from "react-icons/cg";
 import { FaDiscord } from "react-icons/fa";
 import { AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
+import styles from "./Footer.module.css";
 
 interface FooterLink {
   id: number;
@@ -82,12 +83,21 @@ export default function Footer({
   socialLinks: Array<FooterLink>;
 }) {
   return (
-    <footer className="py-6 dark:bg-black dark:text-gray-50">
-      <div className="px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
-        <div className="grid grid-cols-12">
-          <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
-            {logoText && <h2 className="text-2xl font-bold">{logoText}</h2>}
-            <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
+    <footer
+      className={
+        "py-6 dark:bg-black dark:text-gray-50 " + styles.fontFreightBig
+      }
+    >
+      <div
+        className={
+          "px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50 " +
+          styles.pb
+        }
+      >
+        <div className="grid grid-cols-6">
+          <div className="pb-6 col-span-full md:pb-0 md:col-span-2">
+            {logoText && <h2 className="tracking-wide text-3xl">{logoText}</h2>}
+            <div className="flex justify-left pt-6 space-x-4 lg:pt-6 lg:col-end-13">
               {socialLinks.map((link: FooterLink) => {
                 return (
                   <a
@@ -104,7 +114,7 @@ export default function Footer({
               })}
             </div>
           </div>
-          <div className="col-span-6 text-center md:text-right lg:pt-0 lg:col-end-13">
+          <div className="col-span-6 text-center tracking-wide text-3xl md:text-right lg:pt-0 lg:col-end-13">
             <ul>
               {menuLinks.map((link: FooterLink) => (
                 <FooterLink key={link.id} {...link} />
@@ -112,28 +122,19 @@ export default function Footer({
             </ul>
           </div>
         </div>
-        <div className="grid justify-center pt-6 lg:justify-between">
-          <div className="flex">
-            <ul className="flex">
-              {legalLinks.map((link: FooterLink) => (
-                <Link
-                  href={link.url}
-                  className="text-gray-400 hover:text-gray-300 mr-2"
-                  key={link.id}
-                >
-                  {link.text}
-                </Link>
-              ))}
-            </ul>
-          </div>
+        <div className="grid justify-center pt-6 lg:justify-center">
           <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
-            <div className="grid justify-center text-center">
+            <div className="grid justify-center text-center tracking-wide text-xl">
               <h1>CÓDIGO & TÉRMINOS</h1>
               <p>
                 Hay momentos donde nuestra brújula no tiene rumbo y nos cuesta
-                tomar decisiones con mayor claridad. Esta lectura es ideal para
-                recibir un consejo con urgencia del tarot,
+                tomar decisiones con mayor claridad. Esta
               </p>
+              <p>
+                lectura es ideal para recibir un consejo con urgencia del tarot,
+                para tomar decisiones con mayor claridad y{" "}
+              </p>
+              <p>calma.</p>
             </div>
           </div>
         </div>

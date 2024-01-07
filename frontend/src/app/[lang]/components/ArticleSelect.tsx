@@ -37,7 +37,6 @@ export default function ArticleSelect({
     category: string;
   };
 }) {
-
   return (
     <div className="p-4 rounded-lg dark:bg-gray-900 min-h-[365px] relative">
       <h4 className="text-xl font-semibold">Browse By Category</h4>

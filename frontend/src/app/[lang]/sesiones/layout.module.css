@@ -1,0 +1,10 @@
+.title {
+  font-family: -apple-system-ui-serif, ui-serif, "Georgia", serif;
+  letter-spacing: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.subTitle {
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}

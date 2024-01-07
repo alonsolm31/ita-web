@@ -1,0 +1,12 @@
+@media (min-width: 1024px) {
+  .heightLg {
+    height: 48rem;
+  }
+}
+.heightLg {
+  height: 48rem;
+}
+
+.fontFamily {
+  font-family: -apple-system-ui-serif, ui-serif, "Georgia", serif;
+}

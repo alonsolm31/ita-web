@@ -1,3 +1,5 @@
+import style from "./Heading.module.css";
+
 interface Feature {
   id: string;
   attributes: {
@@ -20,15 +22,17 @@ interface Plan {
 interface HeadingProps {
   data: {
     id: string;
-    title: string;
-    plans: Plan[];
+    heading: string;
+    description: string;
   };
 }
 
 export default function Heading({ data }: HeadingProps) {
   return (
-    <section className="py-20 dark:bg-black dark:text-gray-100 m:py-12 lg:py-24">
-      <h1>Headingd</h1>
+    <section className="dark:bg-black dark:text-gray-100 py-2">
+      <div className="text-center">
+        {data.heading && <span className={style.fontSize}>{data.heading}</span>}
+      </div>
     </section>
   );
 }

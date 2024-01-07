@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import "./globals.css";
 import { getStrapiMedia, getStrapiURL } from "./utils/api-helpers";
 import { fetchAPI } from "./utils/fetch-api";
@@ -9,6 +8,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { FALLBACK_SEO } from "@/app/[lang]/utils/constants";
+import style from "./layout.module.css";
 
 async function getGlobal(lang: string): Promise<any> {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
@@ -77,12 +77,10 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang}>
-      <body>
-        <div className=" grid justify-center text-center">
-          <Link href="/">
-            <h1>I T A H E R R E R A</h1>
-            <p>T A R O T I N T U I T I V O</p>
-          </Link>
+      <body className={style.backgroundColor}>
+        <div className="grid justify-center text-center py-6">
+          <h1 className={style.title}>I T A &nbsp; H E R R E R A</h1>
+          <p className={style.subTitle}>T A R O T &nbsp; I N T U I T I V O</p>
         </div>
         <Navbar links={navbar.links} />
 

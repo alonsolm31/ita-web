@@ -54,26 +54,22 @@ function MobileNavLink({ url, text, closeMenu }: MobileNavLink) {
   );
 }
 
-export default function Navbar({
-  links,
-}: {
-  links: Array<NavLink>;
-}) {
+export default function Navbar({ links }: { links: Array<NavLink> }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const closeMenu = () => {
     setMobileMenuOpen(false);
   };
   return (
-    <div className="p-4 dark:bg-black dark:text-gray-100">
+    <div className="p-4 pb-6 dark:bg-black dark:text-gray-100">
       <div className="container flex justify-center h-16 mx-auto px-0 sm:px-6">
         <div className="items-center flex-shrink-0 hidden lg:flex">
           <ul className="items-stretch hidden space-x-3 lg:flex">
             {links.map((item: NavLink) => (
               <NavLink key={item.id} {...item} />
             ))}
-          </ul> 
+          </ul>
         </div>
- 
+
         <Dialog
           as="div"
           className="lg:hidden"
