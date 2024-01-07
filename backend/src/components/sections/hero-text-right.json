@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_slices_test",
+  "info": {
+    "name": "Hero Text Right",
+    "displayName": "Hero Text Right",
+    "icon": "heading",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.button-link"
+    }
+  }
+}

@@ -38,7 +38,10 @@
         "sections.pricing",
         "sections.lead-form",
         "sections.features",
-        "sections.heading"
+        "sections.jorney-features",
+        "sections.heading",
+        "sections.hero-text-right",
+        "sections.recommendations"
       ],
       "pluginOptions": {
         "i18n": {
