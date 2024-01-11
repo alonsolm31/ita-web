@@ -5,9 +5,10 @@ import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import Email from "../components/Email";
 import Heading from "../components/Heading";
-import Test from "../components/HeroTextRight";
+import HeroTextRight from "../components/HeroTextRight";
 import Jorney from "../components/Jorney";
 import Recommendations from "../components/Recommendations";
+import HeroTextLeft from "../components/HeroTextLeft";
 export function sectionRenderer(section: any, index: number) {
   switch (section.__component) {
     case "sections.hero":
@@ -25,7 +26,9 @@ export function sectionRenderer(section: any, index: number) {
     case "sections.heading":
       return <Heading key={index} data={section} />;
     case "sections.hero-text-right":
-      return <Test key={index} data={section} />;
+      return <HeroTextRight key={index} data={section} />;
+    case "sections.hero-text-left":
+      return <HeroTextLeft key={index} data={section} />;
     case "sections.deep-journey":
       return <Jorney key={index} data={section} />;
     case "sections.recommendations":

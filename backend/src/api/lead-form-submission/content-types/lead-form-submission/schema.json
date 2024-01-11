@@ -9,21 +9,17 @@
     "description": ""
   },
   "options": {
-    "increments": true,
-    "timestamps": true,
     "draftAndPublish": false
   },
   "attributes": {
     "email": {
       "type": "string"
     },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "seen",
-        "contacted",
-        "ignored"
-      ]
+    "datetime": {
+      "type": "datetime"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

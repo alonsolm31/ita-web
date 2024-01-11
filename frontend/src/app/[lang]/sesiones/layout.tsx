@@ -10,7 +10,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
         <Image
           src={img}
           alt="none provided"
-          className="object-cover h-72 sm:h-80 lg:h-170 xl:h-112 2xl:h-128 "
+          className={"object-cover lg:h-170 xl:h-112 2xl:h-128 " + styles.smH80}
           width={9999}
           height={1}
         />

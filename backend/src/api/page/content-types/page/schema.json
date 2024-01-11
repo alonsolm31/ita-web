@@ -41,6 +41,7 @@
         "sections.jorney-features",
         "sections.heading",
         "sections.hero-text-right",
+        "sections.hero-text-left",
         "sections.recommendations"
       ],
       "pluginOptions": {

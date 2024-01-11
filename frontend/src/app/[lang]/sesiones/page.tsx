@@ -5,6 +5,8 @@ import { fetchAPI } from "../utils/fetch-api";
 import Loader from "../components/Loader";
 import Sessions from "../views/sessions-list";
 
+import styles from "./page.module.css";
+
 interface Meta {
   pagination: {
     start: number;
@@ -67,6 +69,11 @@ export default function Profile() {
 
   return (
     <div>
+      <div className="dark:bg-black dark:text-gray-100 py-3">
+        <div className="text-center">
+          <span className={styles.fontSize}>Sesiones</span>
+        </div>
+      </div>
       <Sessions data={data}>
         {meta!.pagination.start + meta!.pagination.limit <
           meta!.pagination.total && (

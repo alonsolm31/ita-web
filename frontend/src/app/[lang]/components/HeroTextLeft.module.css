@@ -1,0 +1,9 @@
+.fontFamily {
+  font-family: -apple-system-ui-serif, ui-serif, "Georgia", serif;
+}
+
+@media (min-width: 1280px) {
+  .xlMaxwLg {
+    max-width: 38rem;
+  }
+}
