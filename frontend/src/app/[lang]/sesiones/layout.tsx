@@ -5,10 +5,6 @@ import styles from "./layout.module.css";
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="pb-10">
-      <Script
-        type="text/javascript"
-        src="http://localhost:1337/plugins/strapi-stripe/static/stripe.js"
-      />
       {children}
       <div className="flex flex-col items-center">
         <Image

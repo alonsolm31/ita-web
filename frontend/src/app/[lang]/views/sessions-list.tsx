@@ -28,20 +28,6 @@ interface Article {
         };
       };
     };
-    authorsBio: {
-      data: {
-        attributes: {
-          name: string;
-          avatar: {
-            data: {
-              attributes: {
-                url: string;
-              };
-            };
-          };
-        };
-      };
-    };
   };
 }
 
@@ -61,15 +47,11 @@ export default function PostList({
           );
 
           const category = article.attributes.category.data?.attributes;
-          const authorsBio = article.attributes.authorsBio.data?.attributes;
-
-          const avatarUrl = getStrapiMedia(
-            authorsBio?.avatar.data.attributes.url
-          );
+  
 
           return (
             <Link
-              href={`/blog/${category?.slug}/${article.attributes.slug}`}
+              href={`/sesiones/${category?.slug}/${article.attributes.slug}`}
               key={article.id}
               className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 lg:w-[300px] xl:min-w-[375px] rounded-2xl overflow-hidden shadow-lg"
             >
