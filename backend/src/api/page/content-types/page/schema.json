@@ -42,7 +42,8 @@
         "sections.heading",
         "sections.hero-text-right",
         "sections.hero-text-left",
-        "sections.recommendations"
+        "sections.recommendations",
+        "sections.ceremonies-information"
       ],
       "pluginOptions": {
         "i18n": {

@@ -1,0 +1,14 @@
+.input {
+  margin-bottom: 1rem;
+  border: 1px solid black;
+}
+
+.button {
+  background-color: #d19383;
+}
+
+@media (min-width: 640px) {
+  .smw30 {
+    width: 30rem;
+  }
+}

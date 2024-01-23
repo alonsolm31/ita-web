@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sessions_forms",
+  "info": {
+    "singularName": "sessions-form",
+    "pluralName": "sessions-forms",
+    "displayName": "Sessions and Ceremonies forms",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "emailPhone": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "view": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_layout_ceremonies_information",
+  "info": {
+    "displayName": "Ceremonies Information"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  }
+}
