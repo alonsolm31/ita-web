@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Email from "./Email";
 import DateTime from "./DateTime";

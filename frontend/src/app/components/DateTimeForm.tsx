@@ -1,34 +1,22 @@
+"use client";
 import React from "react";
-import { loadStripe } from "@stripe/stripe-js";
+import { useRouter } from "next/navigation";
+import axios from "axios";
+
 export default function DateTimeForm() {
-  async function redirectToCheckout() {
-    "use server";
-    try {
-      const stripe = await loadStripe(
-        process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
-      );
+  const router = useRouter();
 
-      if (!stripe) throw new Error("Stripe failed to initialize.");
-
-      const checkoutResponse = await fetch("/api/checkout_sessions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      const { sessionId } = await checkoutResponse.json();
-      const stripeError = await stripe.redirectToCheckout({ sessionId });
-
-      if (stripeError) {
-        console.error(stripeError);
-      }
-    } catch (error) {
-      console.error(error);
-    }
+  async function checkout() {
+    const { data } = await axios.post(
+      "http://localhost:3000/api/checkout",
+      { price_id: "price_1OXUCVKX0Q1pwx2K4dApHd3I" },
+      { headers: { "Content-Type": "application/json" } }
+    );
+    router.push(data.url);
   }
 
   return (
+    <button onClick={checkout}>Checkout</button>
     // <div className="flex flex-row items-center self-center justify-center flex-shrink-0 shadow-md lg:justify-end">
     //   <div className="flex flex-col">
     //     <div className="flex flex-row">
@@ -76,13 +64,5 @@ export default function DateTimeForm() {
     //     )}
     //   </div>
     // </div>
-
-    <form action="/api/checkout_sessions" method="POST">
-      <section>
-        <button type="submit" role="link">
-          Checkout
-        </button>
-      </section>
-    </form>
   );
 }
